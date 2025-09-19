@@ -1,3 +1,7 @@
+import { useSigner } from "wagmi";
+import { ethers } from "ethers";
+import ZoraFactoryImplAbi from "../../coins/abis/ZoraFactoryImpl.json";
+
 "use client";
 
 import { useCallback, useEffect, useMemo, useState } from "react";
@@ -99,6 +103,166 @@ function getRelativeTime(dateString: string): string {
 }
 
 export default function ExplorePage() {
+  // Fetch platform-created coins/posts from factory contract events
+  useEffect(() => {
+    async function fetchPlatformCoins() {
+      // Replace with your deployed factory contract address
+      const factoryAddress = "0xYourFactoryAddressHere";
+      const provider = new ethers.providers.JsonRpcProvider(process.env.NEXT_PUBLIC_RPC_URL);
+      const contract = new ethers.Contract(factoryAddress, ZoraFactoryImplAbi, provider);
+      // Query CoinCreated events
+      const filter = contract.filters.CoinCreated();
+      const events = await contract.queryFilter(filter, 0, "latest");
+      const coins = events.map(e => ({
+        address: e.args.coin,
+        name: e.args.name,
+        symbol: e.args.symbol,
+        uri: e.args.uri,
+        creator: e.args.caller,
+      }));
+      setCoins(coins);
+    }
+    fetchPlatformCoins();
+  }, []);
+  {/* Display platform-created coins/posts */}
+  <div style={{ margin: "2rem 0" }}>
+    <h2>Platform Coins/Posts</h2>
+    {coins.length === 0 ? (
+      <p>No coins/posts found.</p>
+    ) : (
+      <ul>
+        {coins.map((c, idx) => (
+          <li key={c.address} style={{ marginBottom: "1rem" }}>
+            <Link href={`/post/${c.address}`} style={{ textDecoration: "none", color: "inherit" }}>
+              <strong>{c.name} ({c.symbol})</strong><br />
+              Address: {c.address}<br />
+              Creator: {c.creator}<br />
+              Metadata URI: {c.uri}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    )}
+  </div>
+  // Form state for coin/post creation
+  const [form, setForm] = useState({
+    payoutRecipient: "",
+    owners: "",
+    uri: "",
+    name: "",
+    symbol: "",
+    platformReferrer: "",
+    currency: "",
+    int24Param: "0",
+    uint256Param: "0",
+  });
+
+  function handleFormChange(e: React.ChangeEvent<HTMLInputElement>) {
+    const { name, value } = e.target;
+    setForm(prev => ({ ...prev, [name]: value }));
+  }
+
+  function handleFormSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    // Convert owners from comma-separated string to array
+    const ownersArr = form.owners.split(",").map(addr => addr.trim()).filter(Boolean);
+    handleDeployCoin({
+      payoutRecipient: form.payoutRecipient,
+      owners: ownersArr,
+      uri: form.uri,
+      name: form.name,
+      symbol: form.symbol,
+      platformReferrer: form.platformReferrer,
+      currency: form.currency,
+      int24Param: parseInt(form.int24Param, 10),
+      uint256Param: ethers.BigNumber.from(form.uint256Param || "0"),
+    });
+  }
+
+  interface DeployCoinParams {
+    payoutRecipient: string;
+    owners: string[];
+    uri: string;
+    name: string;
+    symbol: string;
+    platformReferrer: string;
+    currency: string;
+    int24Param: number;
+    uint256Param: ethers.BigNumber;
+  }
+
+  const ZORA_FACTORY_IMPL_ADDRESS = "0xYourFactoryAddressHere";
+  const { data: signer } = useSigner();
+  const [deploying, setDeploying] = useState<boolean>(false);
+
+  async function handleDeployCoin({
+    payoutRecipient,
+    owners,
+    uri,
+    name,
+    symbol,
+    platformReferrer,
+    currency,
+    int24Param,
+    uint256Param,
+  }: DeployCoinParams): Promise<void> {
+    if (!signer) {
+      alert("Connect your wallet first.");
+      return;
+    }
+    setDeploying(true);
+    try {
+      const contract = new ethers.Contract(
+        ZORA_FACTORY_IMPL_ADDRESS,
+        ZoraFactoryImplAbi,
+        signer
+      );
+      const tx = await contract.deploy(
+        payoutRecipient,
+        owners,
+        uri,
+        name,
+        symbol,
+        platformReferrer,
+        currency,
+        int24Param,
+        uint256Param,
+        { value: ethers.utils.parseEther("0") }
+      );
+      await tx.wait();
+      alert("Coin/Post deployed successfully!");
+    } catch (err) {
+      console.error("Deployment error:", err);
+      alert("Deployment failed.");
+    }
+    setDeploying(false);
+  }
+  // --- UI Form for Coin/Post Creation ---
+  return (
+    <>
+      {/* ...existing Explore page UI... */}
+      <form onSubmit={handleFormSubmit} style={{ margin: "2rem 0", padding: "1rem", border: "1px solid #eee", borderRadius: "8px" }}>
+        <h2>Create Coin/Post</h2>
+        <input name="payoutRecipient" value={form.payoutRecipient} onChange={handleFormChange} placeholder="Payout Recipient Address" required style={{ display: "block", marginBottom: "8px" }} />
+        <input name="owners" value={form.owners} onChange={handleFormChange} placeholder="Owners (comma-separated)" required style={{ display: "block", marginBottom: "8px" }} />
+        <input name="uri" value={form.uri} onChange={handleFormChange} placeholder="Metadata URI" required style={{ display: "block", marginBottom: "8px" }} />
+        <input name="name" value={form.name} onChange={handleFormChange} placeholder="Name" required style={{ display: "block", marginBottom: "8px" }} />
+        <input name="symbol" value={form.symbol} onChange={handleFormChange} placeholder="Symbol" required style={{ display: "block", marginBottom: "8px" }} />
+        <input name="platformReferrer" value={form.platformReferrer} onChange={handleFormChange} placeholder="Platform Referrer Address" required style={{ display: "block", marginBottom: "8px" }} />
+        <input name="currency" value={form.currency} onChange={handleFormChange} placeholder="Currency Address" required style={{ display: "block", marginBottom: "8px" }} />
+        <input name="int24Param" value={form.int24Param} onChange={handleFormChange} placeholder="int24 Param" required style={{ display: "block", marginBottom: "8px" }} />
+        <input name="uint256Param" value={form.uint256Param} onChange={handleFormChange} placeholder="uint256 Param" required style={{ display: "block", marginBottom: "8px" }} />
+        <button type="submit" disabled={deploying} style={{ padding: "0.5rem 1rem" }}>
+          {deploying ? "Deploying..." : "Deploy Coin/Post"}
+        </button>
+      </form>
+      {/* ...existing Explore page UI... */}
+    </>
+  );
+  // (Removed duplicate contract logic and state declarations)
+
+  // Example usage: call handleDeployCoin with user-supplied values when form is submitted
+  // handleDeployCoin({ payoutRecipient, owners, uri, name, symbol, platformReferrer, currency, int24Param, uint256Param });
   const { address } = useAccount();
   const [coins, setCoins] = useState<CoinNode[]>([]);
   const [coinMetasLoading, setCoinMetasLoading] = useState(false);
