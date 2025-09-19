@@ -1,0 +1,60 @@
+[
+  {
+    "type": "function",
+    "name": "getPayoutSwapPath",
+    "inputs": [
+      {
+        "name": "coinVersionLookup",
+        "type": "address",
+        "internalType": "contract IDeployedCoinVersionLookup"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "tuple",
+        "internalType": "struct IHasSwapPath.PayoutSwapPath",
+        "components": [
+          {
+            "name": "path",
+            "type": "tuple[]",
+            "internalType": "struct PathKey[]",
+            "components": [
+              {
+                "name": "intermediateCurrency",
+                "type": "address",
+                "internalType": "Currency"
+              },
+              {
+                "name": "fee",
+                "type": "uint24",
+                "internalType": "uint24"
+              },
+              {
+                "name": "tickSpacing",
+                "type": "int24",
+                "internalType": "int24"
+              },
+              {
+                "name": "hooks",
+                "type": "address",
+                "internalType": "contract IHooks"
+              },
+              {
+                "name": "hookData",
+                "type": "bytes",
+                "internalType": "bytes"
+              }
+            ]
+          },
+          {
+            "name": "currencyIn",
+            "type": "address",
+            "internalType": "Currency"
+          }
+        ]
+      }
+    ],
+    "stateMutability": "view"
+  }
+]

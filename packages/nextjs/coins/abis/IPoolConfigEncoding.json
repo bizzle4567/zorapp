@@ -1,0 +1,46 @@
+[
+  {
+    "type": "function",
+    "name": "encodeMultiCurvePoolConfig",
+    "inputs": [
+      {
+        "name": "version",
+        "type": "uint8",
+        "internalType": "uint8"
+      },
+      {
+        "name": "currency",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "tickLower",
+        "type": "int24[]",
+        "internalType": "int24[]"
+      },
+      {
+        "name": "tickUpper",
+        "type": "int24[]",
+        "internalType": "int24[]"
+      },
+      {
+        "name": "numDiscoveryPositions",
+        "type": "uint16[]",
+        "internalType": "uint16[]"
+      },
+      {
+        "name": "maxDiscoverySupplyShare",
+        "type": "uint256[]",
+        "internalType": "uint256[]"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "stateMutability": "pure"
+  }
+]

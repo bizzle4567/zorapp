@@ -1,0 +1,31 @@
+[
+  {
+    "type": "function",
+    "name": "afterCoinDeploy",
+    "inputs": [
+      {
+        "name": "sender",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "coin",
+        "type": "address",
+        "internalType": "contract ICoin"
+      },
+      {
+        "name": "hookData",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "outputs": [
+      {
+        "name": "",
+        "type": "bytes",
+        "internalType": "bytes"
+      }
+    ],
+    "stateMutability": "payable"
+  }
+]

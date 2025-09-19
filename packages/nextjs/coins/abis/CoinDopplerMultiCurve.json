@@ -1,0 +1,38 @@
+[
+  {
+    "type": "error",
+    "name": "ArrayLengthMismatch",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "ConfigTickLowerMustBeLessThanTickUpper",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "InvalidTickRangeMisordered",
+    "inputs": [
+      {
+        "name": "tickLower",
+        "type": "int24",
+        "internalType": "int24"
+      },
+      {
+        "name": "tickUpper",
+        "type": "int24",
+        "internalType": "int24"
+      }
+    ]
+  },
+  {
+    "type": "error",
+    "name": "ZeroDiscoveryPositions",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "ZeroDiscoverySupplyShare",
+    "inputs": []
+  }
+]

@@ -1,0 +1,13 @@
+[
+  {
+    "type": "error",
+    "name": "InvalidCallbackId",
+    "inputs": [
+      {
+        "name": "callbackId",
+        "type": "uint8",
+        "internalType": "uint8"
+      }
+    ]
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "type": "error",
+    "name": "HookNotDeployed",
+    "inputs": []
+  },
+  {
+    "type": "error",
+    "name": "InvalidHookAddress",
+    "inputs": [
+      {
+        "name": "expected",
+        "type": "address",
+        "internalType": "address"
+      },
+      {
+        "name": "actual",
+        "type": "address",
+        "internalType": "address"
+      }
+    ]
+  }
+]

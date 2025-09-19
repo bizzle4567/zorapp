@@ -1,0 +1,15 @@
+[
+  {
+    "type": "function",
+    "name": "coinType",
+    "inputs": [],
+    "outputs": [
+      {
+        "name": "",
+        "type": "uint8",
+        "internalType": "enum IHasCoinType.CoinType"
+      }
+    ],
+    "stateMutability": "view"
+  }
+]

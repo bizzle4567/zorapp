@@ -1,0 +1,2151 @@
+
+
+> @zoralabs/coins@2.2.1 build:js /home/runner/workspace/packages/coins
+> pnpm run wagmi:generate && pnpm run copy-abis && pnpm run prettier:write && tsup
+
+
+> @zoralabs/coins@2.2.1 wagmi:generate /home/runner/workspace/packages/coins
+> pnpm run build:contracts:minimal && wagmi generate && pnpm exec rename-generated-abi-casing ./package/wagmiGenerated.ts
+
+
+> @zoralabs/coins@2.2.1 build:contracts:minimal /home/runner/workspace/packages/coins
+> forge build --skip test --skip script --no-metadata
+
+[1m[33mWarning[0m[1m:[0m This is a nightly build of Foundry. It is recommended to use the latest stable version. To mute this warning set `FOUNDRY_DISABLE_NIGHTLY_WARNING` in your environment. 
+
+3[2K[1m[[32m⠃[0m][0m Compiling...3[2K[1m[[32m⠊[0m][0m Compiling...3[2K[1m[[32m⠒[0m][0m Compiling...3[2K[1m[[32m⠢[0m][0m Compiling...3[2K[1m[[32m⠆[0m][0m Compiling...3[2K[1m[[32m⠰[0m][0m Compiling...3[2K[1m[[32m⠔[0m][0m Compiling...3[2K[1m[[32m⠒[0m][0m Compiling...3[2K[1m[[32m⠑[0m][0m Compiling...
+No files changed, compilation skipped
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+  [1m[94m--> [0msrc/BaseCoin.sol:61:30
+   [1m[94m|[0m
+[1m[94m61[0m [1m[94m|[0m     address public immutable protocolRewards;
+   [1m[94m|[0m                              [1m[92m^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+  [1m[94m--> [0msrc/BaseCoin.sol:63:30
+   [1m[94m|[0m
+[1m[94m63[0m [1m[94m|[0m     address public immutable protocolRewardRecipient;
+   [1m[94m|[0m                              [1m[92m^^^^^^^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+  [1m[94m--> [0msrc/BaseCoin.sol:65:30
+   [1m[94m|[0m
+[1m[94m65[0m [1m[94m|[0m     address public immutable airlock;
+   [1m[94m|[0m                              [1m[92m^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+  [1m[94m--> [0msrc/BaseCoin.sol:68:35
+   [1m[94m|[0m
+[1m[94m68[0m [1m[94m|[0m     IPoolManager public immutable poolManager;
+   [1m[94m|[0m                                   [1m[92m^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+   [1m[94m--> [0msrc/BaseCoin.sol:121:23
+    [1m[94m|[0m
+[1m[94m121[0m [1m[94m|[0m         string memory tokenURI_,
+    [1m[94m|[0m                       [1m[92m^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+   [1m[94m--> [0msrc/BaseCoin.sol:152:23
+    [1m[94m|[0m
+[1m[94m152[0m [1m[94m|[0m         string memory tokenURI_,
+    [1m[94m|[0m                       [1m[92m^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-function][0m[1m: function names should use mixedCase[0m
+   [1m[94m--> [0msrc/BaseCoin.sol:196:14
+    [1m[94m|[0m
+[1m[94m196[0m [1m[94m|[0m     function _EIP712Name() internal pure override returns (string memory) {
+    [1m[94m|[0m              [1m[92m^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-function\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-function]8;;\
+
+[1m[92mnote[mixed-case-function][0m[1m: function names should use mixedCase[0m
+   [1m[94m--> [0msrc/BaseCoin.sol:288:14
+    [1m[94m|[0m
+[1m[94m288[0m [1m[94m|[0m     function _setContractURI(string memory newURI) internal {
+    [1m[94m|[0m              [1m[92m^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-function\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-function]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/BaseCoin.sol:16:9
+   [1m[94m|[0m
+[1m[94m16[0m [1m[94m|[0m import {IUniswapV3Factory} from "./interfaces/IUniswapV3Factory.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/BaseCoin.sol:17:9
+   [1m[94m|[0m
+[1m[94m17[0m [1m[94m|[0m import {IUniswapV3Pool} from "./interfaces/IUniswapV3Pool.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/BaseCoin.sol:18:9
+   [1m[94m|[0m
+[1m[94m18[0m [1m[94m|[0m import {ISwapRouter} from "./interfaces/ISwapRouter.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/BaseCoin.sol:20:9
+   [1m[94m|[0m
+[1m[94m20[0m [1m[94m|[0m import {IProtocolRewards} from "./interfaces/IProtocolRewards.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/BaseCoin.sol:21:9
+   [1m[94m|[0m
+[1m[94m21[0m [1m[94m|[0m import {IWETH} from "./interfaces/IWETH.sol";
+   [1m[94m|[0m         [1m[92m^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/BaseCoin.sol:32:9
+   [1m[94m|[0m
+[1m[94m32[0m [1m[94m|[0m import {Address} from "@openzeppelin/contracts/utils/Address.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/BaseCoin.sol:39:9
+   [1m[94m|[0m
+[1m[94m39[0m [1m[94m|[0m import {FullMath} from "./utils/uniswap/FullMath.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/BaseCoin.sol:40:9
+   [1m[94m|[0m
+[1m[94m40[0m [1m[94m|[0m import {TickMath} from "./utils/uniswap/TickMath.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/BaseCoin.sol:41:9
+   [1m[94m|[0m
+[1m[94m41[0m [1m[94m|[0m import {LiquidityAmounts} from "./utils/uniswap/LiquidityAmounts.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/BaseCoin.sol:43:9
+   [1m[94m|[0m
+[1m[94m43[0m [1m[94m|[0m import {MarketConstants} from "./libs/MarketConstants.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/BaseCoin.sol:44:9
+   [1m[94m|[0m
+[1m[94m44[0m [1m[94m|[0m import {LpPosition} from "./types/LpPosition.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/BaseCoin.sol:45:9
+   [1m[94m|[0m
+[1m[94m45[0m [1m[94m|[0m import {PoolState} from "./types/PoolState.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+  [1m[94m--> [0msrc/CreatorCoin.sol:41:23
+   [1m[94m|[0m
+[1m[94m41[0m [1m[94m|[0m         string memory tokenURI_,
+   [1m[94m|[0m                       [1m[92m^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/CreatorCoin.sol:12:9
+   [1m[94m|[0m
+[1m[94m12[0m [1m[94m|[0m import {IHooks, PoolConfiguration, PoolKey, ICoin} from "./interfaces/ICoin.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+  [1m[94m--> [0msrc/ZoraFactoryImpl.sol:53:30
+   [1m[94m|[0m
+[1m[94m53[0m [1m[94m|[0m     address public immutable coinV4Impl;
+   [1m[94m|[0m                              [1m[92m^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+  [1m[94m--> [0msrc/ZoraFactoryImpl.sol:55:30
+   [1m[94m|[0m
+[1m[94m55[0m [1m[94m|[0m     address public immutable creatorCoinImpl;
+   [1m[94m|[0m                              [1m[92m^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+  [1m[94m--> [0msrc/ZoraFactoryImpl.sol:57:30
+   [1m[94m|[0m
+[1m[94m57[0m [1m[94m|[0m     address public immutable hook;
+   [1m[94m|[0m                              [1m[92m^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+  [1m[94m--> [0msrc/ZoraFactoryImpl.sol:59:30
+   [1m[94m|[0m
+[1m[94m59[0m [1m[94m|[0m     address public immutable zoraHookRegistry;
+   [1m[94m|[0m                              [1m[92m^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/ZoraFactoryImpl.sol:19:9
+   [1m[94m|[0m
+[1m[94m19[0m [1m[94m|[0m import {ISwapRouter} from "./interfaces/ISwapRouter.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/ZoraFactoryImpl.sol:20:9
+   [1m[94m|[0m
+[1m[94m20[0m [1m[94m|[0m import {IWETH} from "./interfaces/IWETH.sol";
+   [1m[94m|[0m         [1m[92m^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/ZoraFactoryImpl.sol:24:16
+   [1m[94m|[0m
+[1m[94m24[0m [1m[94m|[0m import {ICoin, PoolKeyStruct} from "./interfaces/ICoin.sol";
+   [1m[94m|[0m                [1m[92m^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/ZoraFactoryImpl.sol:32:9
+   [1m[94m|[0m
+[1m[94m32[0m [1m[94m|[0m import {LpPosition} from "./types/LpPosition.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/ZoraFactoryImpl.sol:35:9
+   [1m[94m|[0m
+[1m[94m35[0m [1m[94m|[0m import {CoinDopplerMultiCurve} from "./libs/CoinDopplerMultiCurve.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/ZoraFactoryImpl.sol:37:9
+   [1m[94m|[0m
+[1m[94m37[0m [1m[94m|[0m import {MarketConstants} from "./libs/MarketConstants.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[asm-keccak256][0m[1m: use of inefficient hashing mechanism; consider using inline assembly[0m
+   [1m[94m--> [0msrc/ZoraFactoryImpl.sol:333:16
+    [1m[94m|[0m
+[1m[94m333[0m [1m[94m|[0m         return keccak256(abi.encodePacked(msgSender, name, symbol, poolConfig, platformReferrer, coinSalt));
+    [1m[94m|[0m                [1m[92m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#asm-keccak256\https://book.getfoundry.sh/reference/forge/forge-lint#asm-keccak256]8;;\
+
+[1m[92mnote[asm-keccak256][0m[1m: use of inefficient hashing mechanism; consider using inline assembly[0m
+   [1m[94m--> [0msrc/ZoraFactoryImpl.sol:338:13
+    [1m[94m|[0m
+[1m[94m338[0m [1m[94m|[0m [1m[92m/[0m             keccak256(
+[1m[94m339[0m [1m[94m|[0m [1m[92m|[0m                 abi.encodePacked(
+[1m[94m340[0m [1m[94m|[0m [1m[92m|[0m                     msg.sender,
+[1m[94m341[0m [1m[94m|[0m [1m[92m|[0m                     payoutRecipient,
+[1m[94m...[0m   [1m[92m|[0m
+[1m[94m351[0m [1m[94m|[0m [1m[92m|[0m             );
+    [1m[94m|[0m [1m[92m|_____________^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#asm-keccak256\https://book.getfoundry.sh/reference/forge/forge-lint#asm-keccak256]8;;\
+
+[1m[92mnote[unaliased-plain-import][0m[1m: use named imports '{A, B}' or alias 'import ".." as X'[0m
+ [1m[94m--> [0msrc/deployment/CoinsDeployerBase.sol:4:8
+  [1m[94m|[0m
+[1m[94m4[0m [1m[94m|[0m import "forge-std/Script.sol";
+  [1m[94m|[0m        [1m[92m^^^^^^^^^^^^^^^^^^^^^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unaliased-plain-import\https://book.getfoundry.sh/reference/forge/forge-lint#unaliased-plain-import]8;;\
+
+[1m[92mnote[unsafe-cheatcode][0m[1m: usage of unsafe cheatcodes that can perform dangerous operations[0m
+  [1m[94m--> [0msrc/deployment/CoinsDeployerBase.sol:87:33
+   [1m[94m|[0m
+[1m[94m87[0m [1m[94m|[0m         string memory json = vm.readFile(file);
+   [1m[94m|[0m                                 [1m[92m^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-cheatcode\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-cheatcode]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/deployment/CoinsDeployerBase.sol:11:9
+   [1m[94m|[0m
+[1m[94m11[0m [1m[94m|[0m import {IZoraFactory} from "../interfaces/IZoraFactory.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/deployment/CoinsDeployerBase.sol:19:9
+   [1m[94m|[0m
+[1m[94m19[0m [1m[94m|[0m import {Create2} from "@openzeppelin/contracts/utils/Create2.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+  [1m[94m--> [0msrc/hooks/ZoraV4CoinHook.sol:63:51
+   [1m[94m|[0m
+[1m[94m63[0m [1m[94m|[0m     IDeployedCoinVersionLookup internal immutable coinVersionLookup;
+   [1m[94m|[0m                                                   [1m[92m^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+  [1m[94m--> [0msrc/hooks/ZoraV4CoinHook.sol:66:42
+   [1m[94m|[0m
+[1m[94m66[0m [1m[94m|[0m     IHooksUpgradeGate internal immutable upgradeGate;
+   [1m[94m|[0m                                          [1m[92m^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/hooks/ZoraV4CoinHook.sol:32:9
+   [1m[94m|[0m
+[1m[94m32[0m [1m[94m|[0m import {MultiOwnable} from "../utils/MultiOwnable.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+  [1m[94m--> [0msrc/hooks/deployment/BaseCoinDeployHook.sol:12:35
+   [1m[94m|[0m
+[1m[94m12[0m [1m[94m|[0m     IZoraFactory public immutable factory;
+   [1m[94m|[0m                                   [1m[92m^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+ [1m[94m--> [0msrc/hooks/deployment/BaseCoinDeployHook.sol:6:9
+  [1m[94m|[0m
+[1m[94m6[0m [1m[94m|[0m import {ICoinDeployHook} from "../../interfaces/ICoinDeployHook.sol";
+  [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unwrapped-modifier-logic][0m[1m: wrap modifier logic to reduce code size[0m
+  [1m[94m--> [0msrc/hooks/deployment/BaseCoinDeployHook.sol:21:14
+   [1m[94m|[0m
+[1m[94m21[0m [1m[94m|[0m     modifier onlyFactory() {
+   [1m[94m|[0m              [1m[92m^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: wrap modifier logic to reduce code size
+           
+           [91m- modifier onlyFactory() {
+           [0m[91m-     require(msg.sender == address(factory), NotFactory());
+           [0m[91m-     _;
+           [0m[91m- }
+           [0m[92m+ modifier onlyFactory() {
+           [0m[92m+     _onlyFactory();
+           [0m[92m+     _;
+           [0m[92m+ }
+           [0m[92m+ 
+           [0m[92m+ function _onlyFactory() internal {
+           [0m[92m+     require(msg.sender == address(factory), NotFactory());
+           [0m[92m+ }
+           [0m
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unwrapped-modifier-logic\https://book.getfoundry.sh/reference/forge/forge-lint#unwrapped-modifier-logic]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+  [1m[94m--> [0msrc/hooks/deployment/BuySupplyWithSwapRouterHook.sol:24:27
+   [1m[94m|[0m
+[1m[94m24[0m [1m[94m|[0m     ISwapRouter immutable swapRouter;
+   [1m[94m|[0m                           [1m[92m^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+  [1m[94m--> [0msrc/hooks/deployment/BuySupplyWithSwapRouterHook.sol:25:28
+   [1m[94m|[0m
+[1m[94m25[0m [1m[94m|[0m     IPoolManager immutable poolManager;
+   [1m[94m|[0m                            [1m[92m^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/hooks/deployment/BuySupplyWithSwapRouterHook.sol:14:9
+   [1m[94m|[0m
+[1m[94m14[0m [1m[94m|[0m import {IWETH} from "../../interfaces/IWETH.sol";
+   [1m[94m|[0m         [1m[92m^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0msrc/hooks/deployment/BuySupplyWithSwapRouterHook.sol:123:38
+    [1m[94m|[0m
+[1m[94m123[0m [1m[94m|[0m [1m[94m...[0m   SwapParams(zeroForOne, -(int128(uint128(amountCurrency))), zeroForOne ? TickMath.MIN_SQRT_PRICE + 1 : TickMath.MAX_SQRT_PRICE[1m[94m...[0m
+    [1m[94m|[0m                                [1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'int128' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0msrc/hooks/deployment/BuySupplyWithSwapRouterHook.sol:123:45
+    [1m[94m|[0m
+[1m[94m123[0m [1m[94m|[0m [1m[94m...[0m   SwapParams(zeroForOne, -(int128(uint128(amountCurrency))), zeroForOne ? TickMath.MIN_SQRT_PRICE + 1 : TickMath.MAX_SQRT_PRICE[1m[94m...[0m
+    [1m[94m|[0m                                       [1m[33m^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'uint128' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0msrc/hooks/deployment/BuySupplyWithSwapRouterHook.sol:132:87
+    [1m[94m|[0m
+[1m[94m132[0m [1m[94m|[0m         SafeERC20.safeTransfer(IERC20(coin.currency()), address(poolManager), uint256(uint128(amountCurrency)));
+    [1m[94m|[0m                                                                                       [1m[33m^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'uint128' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0msrc/hooks/deployment/BuySupplyWithSwapRouterHook.sol:134:70
+    [1m[94m|[0m
+[1m[94m134[0m [1m[94m|[0m         poolManager.take(Currency.wrap(address(coin)), buyRecipient, uint256(uint128(amountCoin)));
+    [1m[94m|[0m                                                                      [1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'uint256' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0msrc/hooks/deployment/BuySupplyWithSwapRouterHook.sol:134:78
+    [1m[94m|[0m
+[1m[94m134[0m [1m[94m|[0m         poolManager.take(Currency.wrap(address(coin)), buyRecipient, uint256(uint128(amountCoin)));
+    [1m[94m|[0m                                                                              [1m[33m^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'uint128' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0msrc/hooks/deployment/BuySupplyWithSwapRouterHook.sol:138:27
+    [1m[94m|[0m
+[1m[94m138[0m [1m[94m|[0m         return abi.encode(uint256(uint128(amountCoin)));
+    [1m[94m|[0m                           [1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'uint256' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0msrc/hooks/deployment/BuySupplyWithSwapRouterHook.sol:138:35
+    [1m[94m|[0m
+[1m[94m138[0m [1m[94m|[0m         return abi.encode(uint256(uint128(amountCoin)));
+    [1m[94m|[0m                                   [1m[33m^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'uint128' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+   [1m[94m--> [0msrc/interfaces/ICoin.sol:294:23
+    [1m[94m|[0m
+[1m[94m294[0m [1m[94m|[0m         string memory tokenURI_,
+    [1m[94m|[0m                       [1m[92m^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+  [1m[94m--> [0msrc/interfaces/ICoinV3.sol:27:23
+   [1m[94m|[0m
+[1m[94m27[0m [1m[94m|[0m         string memory tokenURI_,
+   [1m[94m|[0m                       [1m[92m^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+ [1m[94m--> [0msrc/interfaces/ISwapRouter.sol:4:9
+  [1m[94m|[0m
+[1m[94m4[0m [1m[94m|[0m import {ISwapRouter} from "@zoralabs/shared-contracts/interfaces/uniswap/ISwapRouter.sol";
+  [1m[94m|[0m         [1m[92m^^^^^^^^^^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+ [1m[94m--> [0msrc/interfaces/IUpgradeableV4Hook.sol:5:9
+  [1m[94m|[0m
+[1m[94m5[0m [1m[94m|[0m import {LpPosition} from "../types/LpPosition.sol";
+  [1m[94m|[0m         [1m[92m^^^^^^^^^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+ [1m[94m--> [0msrc/interfaces/IZoraFactory.sol:5:9
+  [1m[94m|[0m
+[1m[94m5[0m [1m[94m|[0m import {PoolKeyStruct} from "./ICoin.sol";
+  [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+ [1m[94m--> [0msrc/interfaces/IZoraV4CoinHook.sol:6:9
+  [1m[94m|[0m
+[1m[94m6[0m [1m[94m|[0m import {BalanceDelta} from "@uniswap/v4-core/src/types/BalanceDelta.sol";
+  [1m[94m|[0m         [1m[92m^^^^^^^^^^^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+ [1m[94m--> [0msrc/interfaces/IZoraV4CoinHook.sol:8:9
+  [1m[94m|[0m
+[1m[94m8[0m [1m[94m|[0m import {ICoin} from "./ICoin.sol";
+  [1m[94m|[0m         [1m[92m^^^^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[asm-keccak256][0m[1m: use of inefficient hashing mechanism; consider using inline assembly[0m
+  [1m[94m--> [0msrc/libs/CoinCommon.sol:19:16
+   [1m[94m|[0m
+[1m[94m19[0m [1m[94m|[0m         return keccak256(abi.encode(key));
+   [1m[94m|[0m                [1m[92m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#asm-keccak256\https://book.getfoundry.sh/reference/forge/forge-lint#asm-keccak256]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/CoinConfigurationVersions.sol:10:9
+   [1m[94m|[0m
+[1m[94m10[0m [1m[94m|[0m import {CoinConstants} from "./CoinConstants.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+  [1m[94m--> [0msrc/libs/CoinDopplerMultiCurve.sol:93:27
+   [1m[94m|[0m
+[1m[94m93[0m [1m[94m|[0m             numPositions: uint16(totalDiscoveryPositions + 1), // Add one for the final tail position
+   [1m[94m|[0m                           [1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+           
+           // casting to 'uint16' is safe because [explain why]
+           // forge-lint: disable-next-line(unsafe-typecast)
+           
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/CoinRewardsV4.sol:12:9
+   [1m[94m|[0m
+[1m[94m12[0m [1m[94m|[0m import {PathKey} from "@uniswap/v4-periphery/src/libraries/PathKey.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/CoinRewardsV4.sol:17:9
+   [1m[94m|[0m
+[1m[94m17[0m [1m[94m|[0m import {LpPosition} from "../types/LpPosition.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/CoinRewardsV4.sol:18:9
+   [1m[94m|[0m
+[1m[94m18[0m [1m[94m|[0m import {V4Liquidity} from "./V4Liquidity.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/CoinRewardsV4.sol:30:9
+   [1m[94m|[0m
+[1m[94m30[0m [1m[94m|[0m import {V4Liquidity} from "./V4Liquidity.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+  [1m[94m--> [0msrc/libs/CoinRewardsV4.sol:93:16
+   [1m[94m|[0m
+[1m[94m93[0m [1m[94m|[0m         return uint128(uint256(delta));
+   [1m[94m|[0m                [1m[33m^^^^^^^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+           
+           // casting to 'uint128' is safe because [explain why]
+           // forge-lint: disable-next-line(unsafe-typecast)
+           
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+  [1m[94m--> [0msrc/libs/CoinRewardsV4.sol:93:24
+   [1m[94m|[0m
+[1m[94m93[0m [1m[94m|[0m         return uint128(uint256(delta));
+   [1m[94m|[0m                        [1m[33m^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+           
+           // casting to 'uint256' is safe because [explain why]
+           // forge-lint: disable-next-line(unsafe-typecast)
+           
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0msrc/libs/CoinRewardsV4.sol:120:55
+    [1m[94m|[0m
+[1m[94m120[0m [1m[94m|[0m             uint128 lpRewardAmount0 = computeLpReward(uint128(fees0));
+    [1m[94m|[0m                                                       [1m[33m^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'uint128' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0msrc/libs/CoinRewardsV4.sol:127:55
+    [1m[94m|[0m
+[1m[94m127[0m [1m[94m|[0m             uint128 lpRewardAmount1 = computeLpReward(uint128(fees1));
+    [1m[94m|[0m                                                       [1m[33m^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'uint128' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/CoinSetup.sol:10:9
+   [1m[94m|[0m
+[1m[94m10[0m [1m[94m|[0m import {PoolConfigurationV4} from "../interfaces/ICoin.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/CoinSetup.sol:15:9
+   [1m[94m|[0m
+[1m[94m15[0m [1m[94m|[0m import {TickMath} from "../utils/uniswap/TickMath.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/CoinSetup.sol:16:9
+   [1m[94m|[0m
+[1m[94m16[0m [1m[94m|[0m import {IPoolManager, PoolKey, Currency, IHooks} from "@uniswap/v4-core/src/interfaces/IPoolManager.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/CoinSetup.sol:17:9
+   [1m[94m|[0m
+[1m[94m17[0m [1m[94m|[0m import {Actions} from "@uniswap/v4-periphery/src/libraries/Actions.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/CoinSetup.sol:18:9
+   [1m[94m|[0m
+[1m[94m18[0m [1m[94m|[0m import {IPositionManager} from "@uniswap/v4-periphery/src/interfaces/IPositionManager.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/CoinSetup.sol:20:9
+   [1m[94m|[0m
+[1m[94m20[0m [1m[94m|[0m import {LpPosition} from "../types/LpPosition.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[33mwarning[divide-before-multiply][0m[1m: multiplication should occur before division to avoid loss of precision[0m
+   [1m[94m--> [0msrc/libs/DopplerMath.sol:146:24
+    [1m[94m|[0m
+[1m[94m146[0m [1m[94m|[0m                 return ((tick - tickSpacing + 1) / tickSpacing) * tickSpacing;
+    [1m[94m|[0m                        [1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#divide-before-multiply\https://book.getfoundry.sh/reference/forge/forge-lint#divide-before-multiply]8;;\
+
+[1m[33mwarning[divide-before-multiply][0m[1m: multiplication should occur before division to avoid loss of precision[0m
+   [1m[94m--> [0msrc/libs/DopplerMath.sol:149:24
+    [1m[94m|[0m
+[1m[94m149[0m [1m[94m|[0m                 return (tick / tickSpacing) * tickSpacing;
+    [1m[94m|[0m                        [1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#divide-before-multiply\https://book.getfoundry.sh/reference/forge/forge-lint#divide-before-multiply]8;;\
+
+[1m[33mwarning[divide-before-multiply][0m[1m: multiplication should occur before division to avoid loss of precision[0m
+   [1m[94m--> [0msrc/libs/DopplerMath.sol:155:24
+    [1m[94m|[0m
+[1m[94m155[0m [1m[94m|[0m                 return (tick / tickSpacing) * tickSpacing;
+    [1m[94m|[0m                        [1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#divide-before-multiply\https://book.getfoundry.sh/reference/forge/forge-lint#divide-before-multiply]8;;\
+
+[1m[33mwarning[divide-before-multiply][0m[1m: multiplication should occur before division to avoid loss of precision[0m
+   [1m[94m--> [0msrc/libs/DopplerMath.sol:158:24
+    [1m[94m|[0m
+[1m[94m158[0m [1m[94m|[0m                 return ((tick + tickSpacing - 1) / tickSpacing) * tickSpacing;
+    [1m[94m|[0m                        [1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#divide-before-multiply\https://book.getfoundry.sh/reference/forge/forge-lint#divide-before-multiply]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+  [1m[94m--> [0msrc/libs/DopplerMath.sol:63:63
+   [1m[94m|[0m
+[1m[94m63[0m [1m[94m|[0m                 ? closeTick + int24(uint24(FullMath.mulDiv(i, uint256(uint24(spread)), totalPositions)))
+   [1m[94m|[0m                                                               [1m[33m^^^^^^^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+           
+           // casting to 'uint256' is safe because [explain why]
+           // forge-lint: disable-next-line(unsafe-typecast)
+           
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+  [1m[94m--> [0msrc/libs/DopplerMath.sol:63:71
+   [1m[94m|[0m
+[1m[94m63[0m [1m[94m|[0m                 ? closeTick + int24(uint24(FullMath.mulDiv(i, uint256(uint24(spread)), totalPositions)))
+   [1m[94m|[0m                                                                       [1m[33m^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+           
+           // casting to 'uint24' is safe because [explain why]
+           // forge-lint: disable-next-line(unsafe-typecast)
+           
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+  [1m[94m--> [0msrc/libs/DopplerMath.sol:64:63
+   [1m[94m|[0m
+[1m[94m64[0m [1m[94m|[0m                 : closeTick - int24(uint24(FullMath.mulDiv(i, uint256(uint24(spread)), totalPositions)));
+   [1m[94m|[0m                                                               [1m[33m^^^^^^^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+           
+           // casting to 'uint256' is safe because [explain why]
+           // forge-lint: disable-next-line(unsafe-typecast)
+           
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+  [1m[94m--> [0msrc/libs/DopplerMath.sol:64:71
+   [1m[94m|[0m
+[1m[94m64[0m [1m[94m|[0m                 : closeTick - int24(uint24(FullMath.mulDiv(i, uint256(uint24(spread)), totalPositions)));
+   [1m[94m|[0m                                                                       [1m[33m^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+           
+           // casting to 'uint24' is safe because [explain why]
+           // forge-lint: disable-next-line(unsafe-typecast)
+           
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[92mnote[screaming-snake-case-const][0m[1m: constants should use SCREAMING_SNAKE_CASE[0m
+  [1m[94m--> [0msrc/libs/HooksDeployment.sol:18:13
+   [1m[94m|[0m
+[1m[94m18[0m [1m[94m|[0m Vm constant vm = Vm(address(bytes20(uint160(uint256(keccak256("hevm cheat code"))))));
+   [1m[94m|[0m             [1m[92m^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-const\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-const]8;;\
+
+[1m[92mnote[unsafe-cheatcode][0m[1m: usage of unsafe cheatcodes that can perform dangerous operations[0m
+  [1m[94m--> [0msrc/libs/HooksDeployment.sol:78:16
+   [1m[94m|[0m
+[1m[94m78[0m [1m[94m|[0m             vm.setEnv(envKey, vm.toString(salt));
+   [1m[94m|[0m                [1m[92m^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-cheatcode\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-cheatcode]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/HooksDeployment.sol:13:9
+   [1m[94m|[0m
+[1m[94m13[0m [1m[94m|[0m import {HookMiner} from "@uniswap/v4-periphery/src/utils/HookMiner.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/HooksDeployment.sol:14:9
+   [1m[94m|[0m
+[1m[94m14[0m [1m[94m|[0m import {IPoolManager} from "@uniswap/v4-core/src/interfaces/IPoolManager.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[asm-keccak256][0m[1m: use of inefficient hashing mechanism; consider using inline assembly[0m
+  [1m[94m--> [0msrc/libs/HooksDeployment.sol:71:30
+   [1m[94m|[0m
+[1m[94m71[0m [1m[94m|[0m         bytes32 envVarHash = keccak256(abi.encodePacked(deployer, hookCreationCode));
+   [1m[94m|[0m                              [1m[92m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#asm-keccak256\https://book.getfoundry.sh/reference/forge/forge-lint#asm-keccak256]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/UniV4SwapHelper.sol:14:9
+   [1m[94m|[0m
+[1m[94m14[0m [1m[94m|[0m import {CoinCommon} from "./CoinCommon.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/UniV4SwapHelper.sol:18:9
+   [1m[94m|[0m
+[1m[94m18[0m [1m[94m|[0m import {ISwapPathRouter} from "../interfaces/ISwapPathRouter.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/UniV4SwapHelper.sol:19:9
+   [1m[94m|[0m
+[1m[94m19[0m [1m[94m|[0m import {IHasPoolKey} from "../interfaces/ICoin.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/UniV4SwapHelper.sol:20:9
+   [1m[94m|[0m
+[1m[94m20[0m [1m[94m|[0m import {IERC165} from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/UniV4SwapHelper.sol:21:9
+   [1m[94m|[0m
+[1m[94m21[0m [1m[94m|[0m import {IPoolManager} from "@uniswap/v4-core/src/interfaces/IPoolManager.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/UniV4SwapHelper.sol:22:9
+   [1m[94m|[0m
+[1m[94m22[0m [1m[94m|[0m import {PathKey} from "@uniswap/v4-periphery/src/libraries/PathKey.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/UniV4SwapToCurrency.sol:11:9
+   [1m[94m|[0m
+[1m[94m11[0m [1m[94m|[0m import {ISwapPathRouter} from "../interfaces/ISwapPathRouter.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/UniV4SwapToCurrency.sol:12:9
+   [1m[94m|[0m
+[1m[94m12[0m [1m[94m|[0m import {IHasPoolKey} from "../interfaces/ICoin.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+  [1m[94m--> [0msrc/libs/UniV4SwapToCurrency.sol:42:84
+   [1m[94m|[0m
+[1m[94m42[0m [1m[94m|[0m             lastCurrencyBalance = uint128(_swap(poolManager, poolKey, zeroForOne, -int128(lastCurrencyBalance), ""));
+   [1m[94m|[0m                                                                                    [1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+           
+           // casting to 'int128' is safe because [explain why]
+           // forge-lint: disable-next-line(unsafe-typecast)
+           
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+  [1m[94m--> [0msrc/libs/UniV4SwapToCurrency.sol:66:101
+   [1m[94m|[0m
+[1m[94m66[0m [1m[94m|[0m             outputAmount = initialAmountCurrency + uint128(_swap(poolManager, poolKey, zeroForOne, -int128(inputAmount), bytes("")));
+   [1m[94m|[0m                                                                                                     [1m[33m^^^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+           
+           // casting to 'int128' is safe because [explain why]
+           // forge-lint: disable-next-line(unsafe-typecast)
+           
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/V4Liquidity.sol:11:9
+   [1m[94m|[0m
+[1m[94m11[0m [1m[94m|[0m import {SqrtPriceMath} from "@uniswap/v4-core/src/libraries/SqrtPriceMath.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/V4Liquidity.sol:12:9
+   [1m[94m|[0m
+[1m[94m12[0m [1m[94m|[0m import {FullMath} from "@uniswap/v4-core/src/libraries/FullMath.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/V4Liquidity.sol:13:9
+   [1m[94m|[0m
+[1m[94m13[0m [1m[94m|[0m import {IUnlockCallback} from "@uniswap/v4-core/src/interfaces/callback/IUnlockCallback.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/V4Liquidity.sol:21:9
+   [1m[94m|[0m
+[1m[94m21[0m [1m[94m|[0m import {IERC20} from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/V4Liquidity.sol:23:9
+   [1m[94m|[0m
+[1m[94m23[0m [1m[94m|[0m import {SwapParams} from "@uniswap/v4-core/src/types/PoolOperation.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/V4Liquidity.sol:24:9
+   [1m[94m|[0m
+[1m[94m24[0m [1m[94m|[0m import {IHasRewardsRecipients} from "../interfaces/ICoin.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/V4Liquidity.sol:25:9
+   [1m[94m|[0m
+[1m[94m25[0m [1m[94m|[0m import {IHasSwapPath} from "../interfaces/ICoin.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/V4Liquidity.sol:26:9
+   [1m[94m|[0m
+[1m[94m26[0m [1m[94m|[0m import {UniV4SwapToCurrency} from "./UniV4SwapToCurrency.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/V4Liquidity.sol:27:9
+   [1m[94m|[0m
+[1m[94m27[0m [1m[94m|[0m import {PathKey} from "@uniswap/v4-periphery/src/libraries/PathKey.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0msrc/libs/V4Liquidity.sol:29:25
+   [1m[94m|[0m
+[1m[94m29[0m [1m[94m|[0m import {BurnedPosition, Delta, MigratedLiquidityResult, IUpgradeableV4Hook} from "../interfaces/IUpgradeableV4Hook.sol";
+   [1m[94m|[0m                         [1m[92m^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0msrc/libs/V4Liquidity.sol:134:27
+    [1m[94m|[0m
+[1m[94m134[0m [1m[94m|[0m             totalAmount0: uint256(deltas0),
+    [1m[94m|[0m                           [1m[33m^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'uint256' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0msrc/libs/V4Liquidity.sol:135:27
+    [1m[94m|[0m
+[1m[94m135[0m [1m[94m|[0m             totalAmount1: uint256(deltas1)
+    [1m[94m|[0m                           [1m[33m^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'uint256' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0msrc/libs/V4Liquidity.sol:283:53
+    [1m[94m|[0m
+[1m[94m283[0m [1m[94m|[0m             poolManager.take(poolKey.currency0, to, uint256(currency0Delta));
+    [1m[94m|[0m                                                     [1m[33m^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'uint256' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0msrc/libs/V4Liquidity.sol:287:53
+    [1m[94m|[0m
+[1m[94m287[0m [1m[94m|[0m             poolManager.take(poolKey.currency1, to, uint256(currency1Delta));
+    [1m[94m|[0m                                                     [1m[33m^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'uint256' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0msrc/libs/V4Liquidity.sol:292:62
+    [1m[94m|[0m
+[1m[94m292[0m [1m[94m|[0m             poolKey.currency0.transfer(address(poolManager), uint256(-currency0Delta));
+    [1m[94m|[0m                                                              [1m[33m^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'uint256' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0msrc/libs/V4Liquidity.sol:298:62
+    [1m[94m|[0m
+[1m[94m298[0m [1m[94m|[0m             poolKey.currency1.transfer(address(poolManager), uint256(-currency1Delta));
+    [1m[94m|[0m                                                              [1m[33m^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'uint256' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+  [1m[94m--> [0msrc/proxy/ZoraFactory.sol:26:32
+   [1m[94m|[0m
+[1m[94m26[0m [1m[94m|[0m     bytes32 internal immutable name;
+   [1m[94m|[0m                                [1m[92m^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+  [1m[94m--> [0msrc/utils/AutoSwapper.sol:18:34
+   [1m[94m|[0m
+[1m[94m18[0m [1m[94m|[0m     ISwapRouter public immutable router;
+   [1m[94m|[0m                                  [1m[92m^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+  [1m[94m--> [0msrc/utils/AutoSwapper.sol:24:30
+   [1m[94m|[0m
+[1m[94m24[0m [1m[94m|[0m     address public immutable swapper;
+   [1m[94m|[0m                              [1m[92m^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+  [1m[94m--> [0msrc/utils/AutoSwapper.sol:26:30
+   [1m[94m|[0m
+[1m[94m26[0m [1m[94m|[0m     address public immutable swapRecipient;
+   [1m[94m|[0m                              [1m[92m^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[unwrapped-modifier-logic][0m[1m: wrap modifier logic to reduce code size[0m
+  [1m[94m--> [0msrc/utils/AutoSwapper.sol:28:14
+   [1m[94m|[0m
+[1m[94m28[0m [1m[94m|[0m     modifier onlySwapper() {
+   [1m[94m|[0m              [1m[92m^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: wrap modifier logic to reduce code size
+           
+           [91m- modifier onlySwapper() {
+           [0m[91m-     require(msg.sender == swapper, NotSwapper());
+           [0m[91m-     _;
+           [0m[91m- }
+           [0m[92m+ modifier onlySwapper() {
+           [0m[92m+     _onlySwapper();
+           [0m[92m+     _;
+           [0m[92m+ }
+           [0m[92m+ 
+           [0m[92m+ function _onlySwapper() internal {
+           [0m[92m+     require(msg.sender == swapper, NotSwapper());
+           [0m[92m+ }
+           [0m
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unwrapped-modifier-logic\https://book.getfoundry.sh/reference/forge/forge-lint#unwrapped-modifier-logic]8;;\
+
+[1m[33mwarning[erc20-unchecked-transfer][0m[1m: ERC20 'transfer' and 'transferFrom' calls should check the return value[0m
+  [1m[94m--> [0msrc/utils/AutoSwapper.sol:98:9
+   [1m[94m|[0m
+[1m[94m98[0m [1m[94m|[0m         IERC20(currency).transferFrom(swapRecipient, address(this), amount);
+   [1m[94m|[0m         [1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer\https://book.getfoundry.sh/reference/forge/forge-lint#erc20-unchecked-transfer]8;;\
+
+[1m[92mnote[mixed-case-function][0m[1m: function names should use mixedCase[0m
+  [1m[94m--> [0msrc/utils/MultiOwnable.sol:33:14
+   [1m[94m|[0m
+[1m[94m33[0m [1m[94m|[0m     function __MultiOwnable_init(address[] memory initialOwners) internal onlyInitializing {
+   [1m[94m|[0m              [1m[92m^^^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-function\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-function]8;;\
+
+[1m[92mnote[unwrapped-modifier-logic][0m[1m: wrap modifier logic to reduce code size[0m
+  [1m[94m--> [0msrc/utils/MultiOwnable.sol:24:14
+   [1m[94m|[0m
+[1m[94m24[0m [1m[94m|[0m     modifier onlyOwner() {
+   [1m[94m|[0m              [1m[92m^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: wrap modifier logic to reduce code size
+           
+           [91m- modifier onlyOwner() {
+           [0m[91m-     if (!isOwner(msg.sender)) {
+           [0m[91m-         revert OnlyOwner();
+           [0m[91m-     }
+           [0m[91m-     _;
+           [0m[91m- }
+           [0m[92m+ modifier onlyOwner() {
+           [0m[92m+     _onlyOwner();
+           [0m[92m+     _;
+           [0m[92m+ }
+           [0m[92m+ 
+           [0m[92m+ function _onlyOwner() internal {
+           [0m[92m+     if (!isOwner(msg.sender)) {
+           [0m[92m+         revert OnlyOwner();
+           [0m[92m+     }
+           [0m[92m+ }
+           [0m
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unwrapped-modifier-logic\https://book.getfoundry.sh/reference/forge/forge-lint#unwrapped-modifier-logic]8;;\
+
+[1m[92mnote[unaliased-plain-import][0m[1m: use named imports '{A, B}' or alias 'import ".." as X'[0m
+ [1m[94m--> [0msrc/utils/uniswap/LiquidityAmounts.sol:4:8
+  [1m[94m|[0m
+[1m[94m4[0m [1m[94m|[0m import "./FullMath.sol";
+  [1m[94m|[0m        [1m[92m^^^^^^^^^^^^^^^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unaliased-plain-import\https://book.getfoundry.sh/reference/forge/forge-lint#unaliased-plain-import]8;;\
+
+[1m[92mnote[unaliased-plain-import][0m[1m: use named imports '{A, B}' or alias 'import ".." as X'[0m
+ [1m[94m--> [0msrc/utils/uniswap/LiquidityAmounts.sol:5:8
+  [1m[94m|[0m
+[1m[94m5[0m [1m[94m|[0m import "./FixedPoint96.sol";
+  [1m[94m|[0m        [1m[92m^^^^^^^^^^^^^^^^^^^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unaliased-plain-import\https://book.getfoundry.sh/reference/forge/forge-lint#unaliased-plain-import]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+  [1m[94m--> [0msrc/utils/uniswap/LiquidityAmounts.sol:24:45
+   [1m[94m|[0m
+[1m[94m24[0m [1m[94m|[0m     function getLiquidityForAmount0(uint160 sqrtPriceAX96, uint160 sqrtPriceBX96, uint256 amount0) internal pure returns (uint128 li[1m[94m...[0m
+   [1m[94m|[0m                                             [1m[92m^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+  [1m[94m--> [0msrc/utils/uniswap/LiquidityAmounts.sol:24:68
+   [1m[94m|[0m
+[1m[94m24[0m [1m[94m|[0m     function getLiquidityForAmount0(uint160 sqrtPriceAX96, uint160 sqrtPriceBX96, uint256 amount0) internal pure returns (uint128 li[1m[94m...[0m
+   [1m[94m|[0m                                                                    [1m[92m^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+  [1m[94m--> [0msrc/utils/uniswap/LiquidityAmounts.sol:36:45
+   [1m[94m|[0m
+[1m[94m36[0m [1m[94m|[0m     function getLiquidityForAmount1(uint160 sqrtPriceAX96, uint160 sqrtPriceBX96, uint256 amount1) internal pure returns (uint128 li[1m[94m...[0m
+   [1m[94m|[0m                                             [1m[92m^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+  [1m[94m--> [0msrc/utils/uniswap/LiquidityAmounts.sol:36:68
+   [1m[94m|[0m
+[1m[94m36[0m [1m[94m|[0m     function getLiquidityForAmount1(uint160 sqrtPriceAX96, uint160 sqrtPriceBX96, uint256 amount1) internal pure returns (uint128 li[1m[94m...[0m
+   [1m[94m|[0m                                                                    [1m[92m^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+  [1m[94m--> [0msrc/utils/uniswap/LiquidityAmounts.sol:51:17
+   [1m[94m|[0m
+[1m[94m51[0m [1m[94m|[0m         uint160 sqrtPriceAX96,
+   [1m[94m|[0m                 [1m[92m^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+  [1m[94m--> [0msrc/utils/uniswap/LiquidityAmounts.sol:52:17
+   [1m[94m|[0m
+[1m[94m52[0m [1m[94m|[0m         uint160 sqrtPriceBX96,
+   [1m[94m|[0m                 [1m[92m^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+  [1m[94m--> [0msrc/utils/uniswap/LiquidityAmounts.sol:75:45
+   [1m[94m|[0m
+[1m[94m75[0m [1m[94m|[0m     function getAmount0ForLiquidity(uint160 sqrtPriceAX96, uint160 sqrtPriceBX96, uint128 liquidity) internal pure returns (uint256 [1m[94m...[0m
+   [1m[94m|[0m                                             [1m[92m^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+  [1m[94m--> [0msrc/utils/uniswap/LiquidityAmounts.sol:75:68
+   [1m[94m|[0m
+[1m[94m75[0m [1m[94m|[0m     function getAmount0ForLiquidity(uint160 sqrtPriceAX96, uint160 sqrtPriceBX96, uint128 liquidity) internal pure returns (uint256 [1m[94m...[0m
+   [1m[94m|[0m                                                                    [1m[92m^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+  [1m[94m--> [0msrc/utils/uniswap/LiquidityAmounts.sol:86:45
+   [1m[94m|[0m
+[1m[94m86[0m [1m[94m|[0m     function getAmount1ForLiquidity(uint160 sqrtPriceAX96, uint160 sqrtPriceBX96, uint128 liquidity) internal pure returns (uint256 [1m[94m...[0m
+   [1m[94m|[0m                                             [1m[92m^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+  [1m[94m--> [0msrc/utils/uniswap/LiquidityAmounts.sol:86:68
+   [1m[94m|[0m
+[1m[94m86[0m [1m[94m|[0m     function getAmount1ForLiquidity(uint160 sqrtPriceAX96, uint160 sqrtPriceBX96, uint128 liquidity) internal pure returns (uint256 [1m[94m...[0m
+   [1m[94m|[0m                                                                    [1m[92m^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+   [1m[94m--> [0msrc/utils/uniswap/LiquidityAmounts.sol:102:17
+    [1m[94m|[0m
+[1m[94m102[0m [1m[94m|[0m         uint160 sqrtPriceAX96,
+    [1m[94m|[0m                 [1m[92m^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+   [1m[94m--> [0msrc/utils/uniswap/LiquidityAmounts.sol:103:17
+    [1m[94m|[0m
+[1m[94m103[0m [1m[94m|[0m         uint160 sqrtPriceBX96,
+    [1m[94m|[0m                 [1m[92m^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+  [1m[94m--> [0msrc/utils/uniswap/LiquidityAmounts.sol:15:22
+   [1m[94m|[0m
+[1m[94m15[0m [1m[94m|[0m         require((y = uint128(x)) == x, "liquidity overflow");
+   [1m[94m|[0m                      [1m[33m^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+           
+           // casting to 'uint128' is safe because [explain why]
+           // forge-lint: disable-next-line(unsafe-typecast)
+           
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[92mnote[unaliased-plain-import][0m[1m: use named imports '{A, B}' or alias 'import ".." as X'[0m
+ [1m[94m--> [0msrc/utils/uniswap/Path.sol:4:8
+  [1m[94m|[0m
+[1m[94m4[0m [1m[94m|[0m import "./BytesLib.sol";
+  [1m[94m|[0m        [1m[92m^^^^^^^^^^^^^^^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unaliased-plain-import\https://book.getfoundry.sh/reference/forge/forge-lint#unaliased-plain-import]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+  [1m[94m--> [0msrc/utils/uniswap/SafeCast.sol:18:13
+   [1m[94m|[0m
+[1m[94m18[0m [1m[94m|[0m         y = uint160(x);
+   [1m[94m|[0m             [1m[33m^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+           
+           // casting to 'uint160' is safe because [explain why]
+           // forge-lint: disable-next-line(unsafe-typecast)
+           
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+  [1m[94m--> [0msrc/utils/uniswap/SafeCast.sol:26:13
+   [1m[94m|[0m
+[1m[94m26[0m [1m[94m|[0m         y = uint128(x);
+   [1m[94m|[0m             [1m[33m^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+           
+           // casting to 'uint128' is safe because [explain why]
+           // forge-lint: disable-next-line(unsafe-typecast)
+           
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+  [1m[94m--> [0msrc/utils/uniswap/SafeCast.sol:35:13
+   [1m[94m|[0m
+[1m[94m35[0m [1m[94m|[0m         y = uint128(x);
+   [1m[94m|[0m             [1m[33m^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+           
+           // casting to 'uint128' is safe because [explain why]
+           // forge-lint: disable-next-line(unsafe-typecast)
+           
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+  [1m[94m--> [0msrc/utils/uniswap/SafeCast.sol:42:13
+   [1m[94m|[0m
+[1m[94m42[0m [1m[94m|[0m         y = int128(x);
+   [1m[94m|[0m             [1m[33m^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+           
+           // casting to 'int128' is safe because [explain why]
+           // forge-lint: disable-next-line(unsafe-typecast)
+           
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+  [1m[94m--> [0msrc/utils/uniswap/SafeCast.sol:50:13
+   [1m[94m|[0m
+[1m[94m50[0m [1m[94m|[0m         y = int256(x);
+   [1m[94m|[0m             [1m[33m^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+           
+           // casting to 'int256' is safe because [explain why]
+           // forge-lint: disable-next-line(unsafe-typecast)
+           
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+  [1m[94m--> [0msrc/utils/uniswap/SafeCast.sol:59:16
+   [1m[94m|[0m
+[1m[94m59[0m [1m[94m|[0m         return int128(int256(x));
+   [1m[94m|[0m                [1m[33m^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+           
+           // casting to 'int128' is safe because [explain why]
+           // forge-lint: disable-next-line(unsafe-typecast)
+           
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+  [1m[94m--> [0msrc/utils/uniswap/SafeCast.sol:59:23
+   [1m[94m|[0m
+[1m[94m59[0m [1m[94m|[0m         return int128(int256(x));
+   [1m[94m|[0m                       [1m[33m^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+           
+           // casting to 'int256' is safe because [explain why]
+           // forge-lint: disable-next-line(unsafe-typecast)
+           
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+  [1m[94m--> [0msrc/utils/uniswap/SqrtPriceMath.sol:32:60
+   [1m[94m|[0m
+[1m[94m32[0m [1m[94m|[0m     function getNextSqrtPriceFromAmount0RoundingUp(uint160 sqrtPX96, uint128 liquidity, uint256 amount, bool add) internal pure retu[1m[94m...[0m
+   [1m[94m|[0m                                                            [1m[92m^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+  [1m[94m--> [0msrc/utils/uniswap/SqrtPriceMath.sol:78:62
+   [1m[94m|[0m
+[1m[94m78[0m [1m[94m|[0m     function getNextSqrtPriceFromAmount1RoundingDown(uint160 sqrtPX96, uint128 liquidity, uint256 amount, bool add) internal pure re[1m[94m...[0m
+   [1m[94m|[0m                                                              [1m[92m^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+   [1m[94m--> [0msrc/utils/uniswap/SqrtPriceMath.sol:115:48
+    [1m[94m|[0m
+[1m[94m115[0m [1m[94m|[0m     function getNextSqrtPriceFromInput(uint160 sqrtPX96, uint128 liquidity, uint256 amountIn, bool zeroForOne) internal pure return[1m[94m...[0m
+    [1m[94m|[0m                                                [1m[92m^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+   [1m[94m--> [0msrc/utils/uniswap/SqrtPriceMath.sol:138:49
+    [1m[94m|[0m
+[1m[94m138[0m [1m[94m|[0m     function getNextSqrtPriceFromOutput(uint160 sqrtPX96, uint128 liquidity, uint256 amountOut, bool zeroForOne) internal pure retu[1m[94m...[0m
+    [1m[94m|[0m                                                 [1m[92m^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+   [1m[94m--> [0msrc/utils/uniswap/SqrtPriceMath.sol:162:38
+    [1m[94m|[0m
+[1m[94m162[0m [1m[94m|[0m     function getAmount0Delta(uint160 sqrtPriceAX96, uint160 sqrtPriceBX96, uint128 liquidity, bool roundUp) internal pure returns ([1m[94m...[0m
+    [1m[94m|[0m                                      [1m[92m^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+   [1m[94m--> [0msrc/utils/uniswap/SqrtPriceMath.sol:162:61
+    [1m[94m|[0m
+[1m[94m162[0m [1m[94m|[0m     function getAmount0Delta(uint160 sqrtPriceAX96, uint160 sqrtPriceBX96, uint128 liquidity, bool roundUp) internal pure returns ([1m[94m...[0m
+    [1m[94m|[0m                                                             [1m[92m^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+   [1m[94m--> [0msrc/utils/uniswap/SqrtPriceMath.sol:204:38
+    [1m[94m|[0m
+[1m[94m204[0m [1m[94m|[0m     function getAmount1Delta(uint160 sqrtPriceAX96, uint160 sqrtPriceBX96, uint128 liquidity, bool roundUp) internal pure returns ([1m[94m...[0m
+    [1m[94m|[0m                                      [1m[92m^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+   [1m[94m--> [0msrc/utils/uniswap/SqrtPriceMath.sol:204:61
+    [1m[94m|[0m
+[1m[94m204[0m [1m[94m|[0m     function getAmount1Delta(uint160 sqrtPriceAX96, uint160 sqrtPriceBX96, uint128 liquidity, bool roundUp) internal pure returns ([1m[94m...[0m
+    [1m[94m|[0m                                                             [1m[92m^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+   [1m[94m--> [0msrc/utils/uniswap/SqrtPriceMath.sol:227:38
+    [1m[94m|[0m
+[1m[94m227[0m [1m[94m|[0m     function getAmount0Delta(uint160 sqrtPriceAX96, uint160 sqrtPriceBX96, int128 liquidity) internal pure returns (int256) {
+    [1m[94m|[0m                                      [1m[92m^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+   [1m[94m--> [0msrc/utils/uniswap/SqrtPriceMath.sol:227:61
+    [1m[94m|[0m
+[1m[94m227[0m [1m[94m|[0m     function getAmount0Delta(uint160 sqrtPriceAX96, uint160 sqrtPriceBX96, int128 liquidity) internal pure returns (int256) {
+    [1m[94m|[0m                                                             [1m[92m^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+   [1m[94m--> [0msrc/utils/uniswap/SqrtPriceMath.sol:241:38
+    [1m[94m|[0m
+[1m[94m241[0m [1m[94m|[0m     function getAmount1Delta(uint160 sqrtPriceAX96, uint160 sqrtPriceBX96, int128 liquidity) internal pure returns (int256) {
+    [1m[94m|[0m                                      [1m[92m^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+   [1m[94m--> [0msrc/utils/uniswap/SqrtPriceMath.sol:241:61
+    [1m[94m|[0m
+[1m[94m241[0m [1m[94m|[0m     function getAmount1Delta(uint160 sqrtPriceAX96, uint160 sqrtPriceBX96, int128 liquidity) internal pure returns (int256) {
+    [1m[94m|[0m                                                             [1m[92m^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0msrc/utils/uniswap/SqrtPriceMath.sol:103:24
+    [1m[94m|[0m
+[1m[94m103[0m [1m[94m|[0m                 return uint160(sqrtPX96 - quotient);
+    [1m[94m|[0m                        [1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'uint160' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0msrc/utils/uniswap/SqrtPriceMath.sol:231:69
+    [1m[94m|[0m
+[1m[94m231[0m [1m[94m|[0m                     ? getAmount0Delta(sqrtPriceAX96, sqrtPriceBX96, uint128(-liquidity), false).toInt256()
+    [1m[94m|[0m                                                                     [1m[33m^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'uint128' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0msrc/utils/uniswap/SqrtPriceMath.sol:232:70
+    [1m[94m|[0m
+[1m[94m232[0m [1m[94m|[0m                     : -getAmount0Delta(sqrtPriceAX96, sqrtPriceBX96, uint128(liquidity), true).toInt256();
+    [1m[94m|[0m                                                                      [1m[33m^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'uint128' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0msrc/utils/uniswap/SqrtPriceMath.sol:245:69
+    [1m[94m|[0m
+[1m[94m245[0m [1m[94m|[0m                     ? getAmount1Delta(sqrtPriceAX96, sqrtPriceBX96, uint128(-liquidity), false).toInt256()
+    [1m[94m|[0m                                                                     [1m[33m^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'uint128' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0msrc/utils/uniswap/SqrtPriceMath.sol:246:70
+    [1m[94m|[0m
+[1m[94m246[0m [1m[94m|[0m                     : -getAmount1Delta(sqrtPriceAX96, sqrtPriceBX96, uint128(liquidity), true).toInt256();
+    [1m[94m|[0m                                                                      [1m[33m^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'uint128' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[divide-before-multiply][0m[1m: multiplication should occur before division to avoid loss of precision[0m
+  [1m[94m--> [0msrc/utils/uniswap/TickMath.sol:41:20
+   [1m[94m|[0m
+[1m[94m41[0m [1m[94m|[0m             return (MAX_TICK / tickSpacing) * tickSpacing;
+   [1m[94m|[0m                    [1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#divide-before-multiply\https://book.getfoundry.sh/reference/forge/forge-lint#divide-before-multiply]8;;\
+
+[1m[33mwarning[divide-before-multiply][0m[1m: multiplication should occur before division to avoid loss of precision[0m
+  [1m[94m--> [0msrc/utils/uniswap/TickMath.sol:48:20
+   [1m[94m|[0m
+[1m[94m48[0m [1m[94m|[0m             return (MIN_TICK / tickSpacing) * tickSpacing;
+   [1m[94m|[0m                    [1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#divide-before-multiply\https://book.getfoundry.sh/reference/forge/forge-lint#divide-before-multiply]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+   [1m[94m--> [0msrc/utils/uniswap/TickMath.sol:141:20
+    [1m[94m|[0m
+[1m[94m141[0m [1m[94m|[0m             int256 log_2 = (int256(msb) - 128) << 64;
+    [1m[94m|[0m                    [1m[92m^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+   [1m[94m--> [0msrc/utils/uniswap/TickMath.sol:227:20
+    [1m[94m|[0m
+[1m[94m227[0m [1m[94m|[0m             int256 log_sqrt10001 = log_2 * 255738958999603826347141; // Q22.128 number
+    [1m[94m|[0m                    [1m[92m^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+  [1m[94m--> [0msrc/utils/uniswap/TickMath.sol:70:27
+   [1m[94m|[0m
+[1m[94m70[0m [1m[94m|[0m             if (absTick > uint256(int256(MAX_TICK))) InvalidTick.selector.revertWith(tick);
+   [1m[94m|[0m                           [1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+           
+           // casting to 'uint256' is safe because [explain why]
+           // forge-lint: disable-next-line(unsafe-typecast)
+           
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0msrc/utils/uniswap/TickMath.sol:141:29
+    [1m[94m|[0m
+[1m[94m141[0m [1m[94m|[0m             int256 log_2 = (int256(msb) - 128) << 64;
+    [1m[94m|[0m                             [1m[33m^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'int256' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[92mnote[unaliased-plain-import][0m[1m: use named imports '{A, B}' or alias 'import ".." as X'[0m
+ [1m[94m--> [0mtest/utils/BaseTest.sol:4:8
+  [1m[94m|[0m
+[1m[94m4[0m [1m[94m|[0m import "forge-std/Test.sol";
+  [1m[94m|[0m        [1m[92m^^^^^^^^^^^^^^^^^^^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unaliased-plain-import\https://book.getfoundry.sh/reference/forge/forge-lint#unaliased-plain-import]8;;\
+
+[1m[92mnote[mixed-case-function][0m[1m: function names should use mixedCase[0m
+   [1m[94m--> [0mtest/utils/BaseTest.sol:137:14
+    [1m[94m|[0m
+[1m[94m137[0m [1m[94m|[0m     function _deployCoinUSDCPair() internal {
+    [1m[94m|[0m              [1m[92m^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-function\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-function]8;;\
+
+[1m[92mnote[mixed-case-function][0m[1m: function names should use mixedCase[0m
+   [1m[94m--> [0mtest/utils/BaseTest.sol:344:14
+    [1m[94m|[0m
+[1m[94m344[0m [1m[94m|[0m     function dealUSDC(address to, uint256 numUSDC) internal returns (uint256) {
+    [1m[94m|[0m              [1m[92m^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-function\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-function]8;;\
+
+[1m[92mnote[mixed-case-variable][0m[1m: mutable variables should use mixedCase[0m
+   [1m[94m--> [0mtest/utils/BaseTest.sol:344:43
+    [1m[94m|[0m
+[1m[94m344[0m [1m[94m|[0m     function dealUSDC(address to, uint256 numUSDC) internal returns (uint256) {
+    [1m[94m|[0m                                           [1m[92m^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable\https://book.getfoundry.sh/reference/forge/forge-lint#mixed-case-variable]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+ [1m[94m--> [0mtest/utils/BaseTest.sol:6:9
+  [1m[94m|[0m
+[1m[94m6[0m [1m[94m|[0m import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
+  [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^^^^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+ [1m[94m--> [0mtest/utils/BaseTest.sol:7:9
+  [1m[94m|[0m
+[1m[94m7[0m [1m[94m|[0m import {Address} from "@openzeppelin/contracts/utils/Address.sol";
+  [1m[94m|[0m         [1m[92m^^^^^^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+ [1m[94m--> [0mtest/utils/BaseTest.sol:8:9
+  [1m[94m|[0m
+[1m[94m8[0m [1m[94m|[0m import {ERC1967Utils} from "@openzeppelin/contracts/proxy/ERC1967/ERC1967Utils.sol";
+  [1m[94m|[0m         [1m[92m^^^^^^^^^^^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+ [1m[94m--> [0mtest/utils/BaseTest.sol:9:9
+  [1m[94m|[0m
+[1m[94m9[0m [1m[94m|[0m import {IERC165} from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
+  [1m[94m|[0m         [1m[92m^^^^^^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0mtest/utils/BaseTest.sol:16:9
+   [1m[94m|[0m
+[1m[94m16[0m [1m[94m|[0m import {MultiOwnable} from "../../src/utils/MultiOwnable.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0mtest/utils/BaseTest.sol:18:9
+   [1m[94m|[0m
+[1m[94m18[0m [1m[94m|[0m import {IERC7572} from "../../src/interfaces/IERC7572.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0mtest/utils/BaseTest.sol:24:9
+   [1m[94m|[0m
+[1m[94m24[0m [1m[94m|[0m import {IUniswapV3Pool} from "../../src/interfaces/IUniswapV3Pool.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0mtest/utils/BaseTest.sol:25:9
+   [1m[94m|[0m
+[1m[94m25[0m [1m[94m|[0m import {IProtocolRewards} from "../../src/interfaces/IProtocolRewards.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0mtest/utils/BaseTest.sol:27:9
+   [1m[94m|[0m
+[1m[94m27[0m [1m[94m|[0m import {MarketConstants} from "../../src/libs/MarketConstants.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0mtest/utils/BaseTest.sol:39:9
+   [1m[94m|[0m
+[1m[94m39[0m [1m[94m|[0m import {Commands} from "@uniswap/universal-router/contracts/libraries/Commands.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0mtest/utils/BaseTest.sol:41:9
+   [1m[94m|[0m
+[1m[94m41[0m [1m[94m|[0m import {Actions} from "@uniswap/v4-periphery/src/libraries/Actions.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0mtest/utils/BaseTest.sol:42:9
+   [1m[94m|[0m
+[1m[94m42[0m [1m[94m|[0m import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+   [1m[94m|[0m         [1m[92m^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0mtest/utils/BaseTest.sol:45:9
+   [1m[94m|[0m
+[1m[94m45[0m [1m[94m|[0m import {IHooks} from "@uniswap/v4-core/src/interfaces/IHooks.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+  [1m[94m--> [0mtest/utils/FeeEstimatorHook.sol:15:9
+   [1m[94m|[0m
+[1m[94m15[0m [1m[94m|[0m import {UniV4SwapToCurrency} from "../../src/libs/UniV4SwapToCurrency.sol";
+   [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+  [1m[94m--> [0mtest/utils/FeeEstimatorHook.sol:78:31
+   [1m[94m|[0m
+[1m[94m78[0m [1m[94m|[0m             feeState.fees0 += uint128(fee0);
+   [1m[94m|[0m                               [1m[33m^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+           
+           // casting to 'uint128' is safe because [explain why]
+           // forge-lint: disable-next-line(unsafe-typecast)
+           
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+  [1m[94m--> [0mtest/utils/FeeEstimatorHook.sol:79:31
+   [1m[94m|[0m
+[1m[94m79[0m [1m[94m|[0m             feeState.fees1 += uint128(fee1);
+   [1m[94m|[0m                               [1m[33m^^^^^^^^^^^^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+           
+           // casting to 'uint128' is safe because [explain why]
+           // forge-lint: disable-next-line(unsafe-typecast)
+           
+           
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[incorrect-shift][0m[1m: the order of args in a shift operation is incorrect[0m
+   [1m[94m--> [0mtest/utils/ProtocolRewards.sol:343:26
+    [1m[94m|[0m
+[1m[94m343[0m [1m[94m|[0m         uint256 result = 1 << (log2(a) >> 1);
+    [1m[94m|[0m                          [1m[33m^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#incorrect-shift\https://book.getfoundry.sh/reference/forge/forge-lint#incorrect-shift]8;;\
+
+[1m[33mwarning[incorrect-shift][0m[1m: the order of args in a shift operation is incorrect[0m
+   [1m[94m--> [0mtest/utils/ProtocolRewards.sol:420:57
+    [1m[94m|[0m
+[1m[94m420[0m [1m[94m|[0m             return result + (rounding == Rounding.Up && 1 << result < value ? 1 : 0);
+    [1m[94m|[0m                                                         [1m[33m^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#incorrect-shift\https://book.getfoundry.sh/reference/forge/forge-lint#incorrect-shift]8;;\
+
+[1m[33mwarning[incorrect-shift][0m[1m: the order of args in a shift operation is incorrect[0m
+   [1m[94m--> [0mtest/utils/ProtocolRewards.sol:512:57
+    [1m[94m|[0m
+[1m[94m512[0m [1m[94m|[0m             return result + (rounding == Rounding.Up && 1 << (result << 3) < value ? 1 : 0);
+    [1m[94m|[0m                                                         [1m[33m^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#incorrect-shift\https://book.getfoundry.sh/reference/forge/forge-lint#incorrect-shift]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+    [1m[94m--> [0mtest/utils/ProtocolRewards.sol:1151:31
+     [1m[94m|[0m
+[1m[94m1151[0m [1m[94m|[0m     bytes32 private immutable _cachedDomainSeparator;
+     [1m[94m|[0m                               [1m[92m^^^^^^^^^^^^^^^^^^^^^^[0m
+     [1m[94m|[0m
+     [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+    [1m[94m--> [0mtest/utils/ProtocolRewards.sol:1152:31
+     [1m[94m|[0m
+[1m[94m1152[0m [1m[94m|[0m     uint256 private immutable _cachedChainId;
+     [1m[94m|[0m                               [1m[92m^^^^^^^^^^^^^^[0m
+     [1m[94m|[0m
+     [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+    [1m[94m--> [0mtest/utils/ProtocolRewards.sol:1153:31
+     [1m[94m|[0m
+[1m[94m1153[0m [1m[94m|[0m     address private immutable _cachedThis;
+     [1m[94m|[0m                               [1m[92m^^^^^^^^^^^[0m
+     [1m[94m|[0m
+     [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+    [1m[94m--> [0mtest/utils/ProtocolRewards.sol:1155:31
+     [1m[94m|[0m
+[1m[94m1155[0m [1m[94m|[0m     bytes32 private immutable _hashedName;
+     [1m[94m|[0m                               [1m[92m^^^^^^^^^^^[0m
+     [1m[94m|[0m
+     [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+    [1m[94m--> [0mtest/utils/ProtocolRewards.sol:1156:31
+     [1m[94m|[0m
+[1m[94m1156[0m [1m[94m|[0m     bytes32 private immutable _hashedVersion;
+     [1m[94m|[0m                               [1m[92m^^^^^^^^^^^^^^[0m
+     [1m[94m|[0m
+     [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+    [1m[94m--> [0mtest/utils/ProtocolRewards.sol:1158:35
+     [1m[94m|[0m
+[1m[94m1158[0m [1m[94m|[0m     ShortString private immutable _name;
+     [1m[94m|[0m                                   [1m[92m^^^^^[0m
+     [1m[94m|[0m
+     [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+    [1m[94m--> [0mtest/utils/ProtocolRewards.sol:1159:35
+     [1m[94m|[0m
+[1m[94m1159[0m [1m[94m|[0m     ShortString private immutable _version;
+     [1m[94m|[0m                                   [1m[92m^^^^^^^^[0m
+     [1m[94m|[0m
+     [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0mtest/utils/ProtocolRewards.sol:546:28
+    [1m[94m|[0m
+[1m[94m546[0m [1m[94m|[0m         return x + (int256(uint256(x) >> 255) & (a ^ b));
+    [1m[94m|[0m                            [1m[33m^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'uint256' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0mtest/utils/ProtocolRewards.sol:751:33
+    [1m[94m|[0m
+[1m[94m751[0m [1m[94m|[0m         return ShortString.wrap(bytes32(uint256(bytes32(bstr)) | bstr.length));
+    [1m[94m|[0m                                 [1m[33m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'bytes32' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[33mwarning[unsafe-typecast][0m[1m: typecasts that can truncate values should be checked[0m
+   [1m[94m--> [0mtest/utils/ProtocolRewards.sol:751:49
+    [1m[94m|[0m
+[1m[94m751[0m [1m[94m|[0m         return ShortString.wrap(bytes32(uint256(bytes32(bstr)) | bstr.length));
+    [1m[94m|[0m                                                 [1m[33m^^^^^^^^^^^^^[0m
+    [1m[94m|[0m
+    [1m[94m= [0m[1mnote[0m: Consider disabling this lint if you're certain the cast is safe:
+            
+            // casting to 'bytes32' is safe because [explain why]
+            // forge-lint: disable-next-line(unsafe-typecast)
+            
+            
+    [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast\https://book.getfoundry.sh/reference/forge/forge-lint#unsafe-typecast]8;;\
+
+[1m[92mnote[screaming-snake-case-immutable][0m[1m: immutables should use SCREAMING_SNAKE_CASE[0m
+ [1m[94m--> [0mtest/utils/ProxyShim.sol:8:23
+  [1m[94m|[0m
+[1m[94m8[0m [1m[94m|[0m     address immutable canUpgrade;
+  [1m[94m|[0m                       [1m[92m^^^^^^^^^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-immutable]8;;\
+
+[1m[92mnote[screaming-snake-case-const][0m[1m: constants should use SCREAMING_SNAKE_CASE[0m
+  [1m[94m--> [0mtest/utils/RewardTestHelpers.sol:20:25
+   [1m[94m|[0m
+[1m[94m20[0m [1m[94m|[0m     Vm private constant vm = Vm(0x7109709ECfa91a80626fF3989D68f67F5b1DD12D);
+   [1m[94m|[0m                         [1m[92m^^[0m
+   [1m[94m|[0m
+   [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-const\https://book.getfoundry.sh/reference/forge/forge-lint#screaming-snake-case-const]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+ [1m[94m--> [0mtest/utils/RewardTestHelpers.sol:5:9
+  [1m[94m|[0m
+[1m[94m5[0m [1m[94m|[0m import {FeeEstimatorHook} from "./FeeEstimatorHook.sol";
+  [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+ [1m[94m--> [0mtest/utils/RewardTestHelpers.sol:6:9
+  [1m[94m|[0m
+[1m[94m6[0m [1m[94m|[0m import {CoinConstants} from "../../src/libs/CoinConstants.sol";
+  [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+ [1m[94m--> [0mscript/UpgradeCoinImpl.sol:4:9
+  [1m[94m|[0m
+[1m[94m4[0m [1m[94m|[0m import {ProxyDeployerScript, DeterministicDeployerAndCaller} from "@zoralabs/shared-contracts/deployment/ProxyDeployerScript.sol";
+  [1m[94m|[0m         [1m[92m^^^^^^^^^^^^^^^^^^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[1m[92mnote[unused-import][0m[1m: unused imports should be removed[0m
+ [1m[94m--> [0mscript/UpgradeCoinImpl.sol:4:30
+  [1m[94m|[0m
+[1m[94m4[0m [1m[94m|[0m import {ProxyDeployerScript, DeterministicDeployerAndCaller} from "@zoralabs/shared-contracts/deployment/ProxyDeployerScript.sol";
+  [1m[94m|[0m                              [1m[92m^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
+  [1m[94m|[0m
+  [1m[94m= [0m[1mhelp[0m: ]8;;https://book.getfoundry.sh/reference/forge/forge-lint#unused-import\https://book.getfoundry.sh/reference/forge/forge-lint#unused-import]8;;\
+
+[?25l[1G[33m⠋[39m Validating plugins[1G[2K[1G[32m✔[39m Validating plugins
+[?25h[?25l[1G[33m⠙[39m Resolving contracts[?25l[1G[2K[1G[33m⠹[39m Resolving contracts[?25l[1G[2K[1G[33m⠸[39m Resolving contracts[1G[2K[1G[32m✔[39m Resolving contracts
+[?25h[?25l[1G[33m⠼[39m Running plugins[1G[2K[1G[32m✔[39m Running plugins
+[?25h[?25l[1G[33m⠴[39m Writing to [90mpackage/wagmiGenerated.ts[39m[?25l[1G[2K[1G[33m⠦[39m Writing to [90mpackage/wagmiGenerated.ts[39m[?25l[1G[2K[1G[33m⠧[39m Writing to [90mpackage/wagmiGenerated.ts[39m[?25l[1G[2K[1G[33m⠇[39m Writing to [90mpackage/wagmiGenerated.ts[39m[?25l[1G[2K[1G[33m⠏[39m Writing to [90mpackage/wagmiGenerated.ts[39m[1G[2K[1G[32m✔[39m Writing to [90mpackage/wagmiGenerated.ts[39m
+[?25h🔄 Processing 1 file(s) to replace 'Abi' with 'ABI'...
+📝 Processing ./package/wagmiGenerated.ts...
+✅ Updated ./package/wagmiGenerated.ts (10 replacements)
+✨ All files processed successfully!
+
+> @zoralabs/coins@2.2.1 copy-abis /home/runner/workspace/packages/coins
+> pnpm exec bundle-abis
+
+
+> @zoralabs/coins@2.2.1 prettier:write /home/runner/workspace/packages/coins
+> prettier --write 'src/**/*.sol' 'test/**/*.sol' 'script/**/*.sol'
+
+src/BaseCoin.sol[2K[1G[90msrc/BaseCoin.sol[39m 1504ms (unchanged)
+src/ContentCoin.sol[2K[1G[90msrc/ContentCoin.sol[39m 176ms (unchanged)
+src/CreatorCoin.sol[2K[1G[90msrc/CreatorCoin.sol[39m 200ms (unchanged)
+src/deployment/CoinsDeployerBase.sol[2K[1G[90msrc/deployment/CoinsDeployerBase.sol[39m 768ms (unchanged)
+src/hook-registry/ZoraHookRegistry.sol[2K[1G[90msrc/hook-registry/ZoraHookRegistry.sol[39m 307ms (unchanged)
+src/hooks/deployment/BaseCoinDeployHook.sol[2K[1G[90msrc/hooks/deployment/BaseCoinDeployHook.sol[39m 79ms (unchanged)
+src/hooks/deployment/BuySupplyWithSwapRouterHook.sol[2K[1G[90msrc/hooks/deployment/BuySupplyWithSwapRouterHook.sol[39m 506ms (unchanged)
+src/hooks/HookUpgradeGate.sol[2K[1G[90msrc/hooks/HookUpgradeGate.sol[39m 86ms (unchanged)
+src/hooks/ZoraV4CoinHook.sol[2K[1G[90msrc/hooks/ZoraV4CoinHook.sol[39m 494ms (unchanged)
+src/interfaces/IAirlock.sol[2K[1G[90msrc/interfaces/IAirlock.sol[39m 5ms (unchanged)
+src/interfaces/ICoin.sol[2K[1G[90msrc/interfaces/ICoin.sol[39m 28ms (unchanged)
+src/interfaces/ICoinComments.sol[2K[1G[90msrc/interfaces/ICoinComments.sol[39m 17ms (unchanged)
+src/interfaces/ICoinDeployHook.sol[2K[1G[90msrc/interfaces/ICoinDeployHook.sol[39m 45ms (unchanged)
+src/interfaces/ICoinV3.sol[2K[1G[90msrc/interfaces/ICoinV3.sol[39m 37ms (unchanged)
+src/interfaces/ICreatorCoin.sol[2K[1G[90msrc/interfaces/ICreatorCoin.sol[39m 3ms (unchanged)
+src/interfaces/ICreatorCoinHook.sol[2K[1G[90msrc/interfaces/ICreatorCoinHook.sol[39m 5ms (unchanged)
+src/interfaces/IDeployedCoinVersionLookup.sol[2K[1G[90msrc/interfaces/IDeployedCoinVersionLookup.sol[39m 2ms (unchanged)
+src/interfaces/IDopplerErrors.sol[2K[1G[90msrc/interfaces/IDopplerErrors.sol[39m 8ms (unchanged)
+src/interfaces/IERC7572.sol[2K[1G[90msrc/interfaces/IERC7572.sol[39m 1ms (unchanged)
+src/interfaces/IHasRewardsRecipients.sol[2K[1G[90msrc/interfaces/IHasRewardsRecipients.sol[39m 2ms (unchanged)
+src/interfaces/IHooksUpgradeGate.sol[2K[1G[90msrc/interfaces/IHooksUpgradeGate.sol[39m 4ms (unchanged)
+src/interfaces/IMsgSender.sol[2K[1G[90msrc/interfaces/IMsgSender.sol[39m 2ms (unchanged)
+src/interfaces/INonfungiblePositionManager.sol[2K[1G[90msrc/interfaces/INonfungiblePositionManager.sol[39m 8ms (unchanged)
+src/interfaces/IPoolConfigEncoding.sol[2K[1G[90msrc/interfaces/IPoolConfigEncoding.sol[39m 3ms (unchanged)
+src/interfaces/IProtocolRewards.sol[2K[1G[90msrc/interfaces/IProtocolRewards.sol[39m 7ms (unchanged)
+src/interfaces/ISwapPathRouter.sol[2K[1G[90msrc/interfaces/ISwapPathRouter.sol[39m 10ms (unchanged)
+src/interfaces/ISwapRouter.sol[2K[1G[90msrc/interfaces/ISwapRouter.sol[39m 30ms (unchanged)
+src/interfaces/IUniswapV3Factory.sol[2K[1G[90msrc/interfaces/IUniswapV3Factory.sol[39m 6ms (unchanged)
+src/interfaces/IUniswapV3Pool.sol[2K[1G[90msrc/interfaces/IUniswapV3Pool.sol[39m 17ms (unchanged)
+src/interfaces/IUniswapV3SwapCallback.sol[2K[1G[90msrc/interfaces/IUniswapV3SwapCallback.sol[39m 4ms (unchanged)
+src/interfaces/IUpgradeableV4Hook.sol[2K[1G[90msrc/interfaces/IUpgradeableV4Hook.sol[39m 12ms (unchanged)
+src/interfaces/IWETH.sol[2K[1G[90msrc/interfaces/IWETH.sol[39m 22ms (unchanged)
+src/interfaces/IZoraFactory.sol[2K[1G[90msrc/interfaces/IZoraFactory.sol[39m 34ms (unchanged)
+src/interfaces/IZoraHookRegistry.sol[2K[1G[90msrc/interfaces/IZoraHookRegistry.sol[39m 6ms (unchanged)
+src/interfaces/IZoraV4CoinHook.sol[2K[1G[90msrc/interfaces/IZoraV4CoinHook.sol[39m 12ms (unchanged)
+src/libs/CoinCommon.sol[2K[1G[90msrc/libs/CoinCommon.sol[39m 8ms (unchanged)
+src/libs/CoinConfigurationVersions.sol[2K[1G[90msrc/libs/CoinConfigurationVersions.sol[39m 121ms (unchanged)
+src/libs/CoinConstants.sol[2K[1G[90msrc/libs/CoinConstants.sol[39m 7ms (unchanged)
+src/libs/CoinDopplerMultiCurve.sol[2K[1G[90msrc/libs/CoinDopplerMultiCurve.sol[39m 682ms (unchanged)
+src/libs/CoinRewardsV4.sol[2K[1G[90msrc/libs/CoinRewardsV4.sol[39m 591ms (unchanged)
+src/libs/CoinSetup.sol[2K[1G[90msrc/libs/CoinSetup.sol[39m 173ms (unchanged)
+src/libs/CreatorCoinConstants.sol[2K[1G[90msrc/libs/CreatorCoinConstants.sol[39m 3ms (unchanged)
+src/libs/DopplerMath.sol[2K[1G[90msrc/libs/DopplerMath.sol[39m 438ms (unchanged)
+src/libs/HooksDeployment.sol[2K[1G[90msrc/libs/HooksDeployment.sol[39m 395ms (unchanged)
+src/libs/MarketConstants.sol[2K[1G[90msrc/libs/MarketConstants.sol[39m 4ms (unchanged)
+src/libs/PoolStateReader.sol[2K[1G[90msrc/libs/PoolStateReader.sol[39m 9ms (unchanged)
+src/libs/UniV4SwapHelper.sol[2K[1G[90msrc/libs/UniV4SwapHelper.sol[39m 179ms (unchanged)
+src/libs/UniV4SwapToCurrency.sol[2K[1G[90msrc/libs/UniV4SwapToCurrency.sol[39m 217ms (unchanged)
+src/libs/V4Liquidity.sol[2K[1G[90msrc/libs/V4Liquidity.sol[39m 985ms (unchanged)
+src/proxy/ZoraFactory.sol[2K[1G[90msrc/proxy/ZoraFactory.sol[39m 14ms (unchanged)
+src/types/LpPosition.sol[2K[1G[90msrc/types/LpPosition.sol[39m 2ms (unchanged)
+src/types/PoolConfiguration.sol[2K[1G[90msrc/types/PoolConfiguration.sol[39m 3ms (unchanged)
+src/types/PoolState.sol[2K[1G[90msrc/types/PoolState.sol[39m 3ms (unchanged)
+src/utils/AutoSwapper.sol[2K[1G[90msrc/utils/AutoSwapper.sol[39m 61ms (unchanged)
+src/utils/DeployedCoinVersionLookup.sol[2K[1G[90msrc/utils/DeployedCoinVersionLookup.sol[39m 11ms (unchanged)
+src/utils/MultiOwnable.sol[2K[1G[90msrc/utils/MultiOwnable.sol[39m 154ms (unchanged)
+src/utils/uniswap/BitMath.sol[2K[1G[90msrc/utils/uniswap/BitMath.sol[39m 12ms (unchanged)
+src/utils/uniswap/BytesLib.sol[2K[1G[90msrc/utils/uniswap/BytesLib.sol[39m 59ms (unchanged)
+src/utils/uniswap/CustomRevert.sol[2K[1G[90msrc/utils/uniswap/CustomRevert.sol[39m 127ms (unchanged)
+src/utils/uniswap/FixedPoint96.sol[2K[1G[90msrc/utils/uniswap/FixedPoint96.sol[39m 2ms (unchanged)
+src/utils/uniswap/FullMath.sol[2K[1G[90msrc/utils/uniswap/FullMath.sol[39m 197ms (unchanged)
+src/utils/uniswap/LiquidityAmounts.sol[2K[1G[90msrc/utils/uniswap/LiquidityAmounts.sol[39m 312ms (unchanged)
+src/utils/uniswap/Path.sol[2K[1G[90msrc/utils/uniswap/Path.sol[39m 16ms (unchanged)
+src/utils/uniswap/SafeCast.sol[2K[1G[90msrc/utils/uniswap/SafeCast.sol[39m 126ms (unchanged)
+src/utils/uniswap/SqrtPriceMath.sol[2K[1G[90msrc/utils/uniswap/SqrtPriceMath.sol[39m 402ms (unchanged)
+src/utils/uniswap/TickMath.sol[2K[1G[90msrc/utils/uniswap/TickMath.sol[39m 292ms (unchanged)
+src/utils/uniswap/UnsafeMath.sol[2K[1G[90msrc/utils/uniswap/UnsafeMath.sol[39m 9ms (unchanged)
+src/version/ContractVersionBase.sol[2K[1G[90msrc/version/ContractVersionBase.sol[39m 2ms (unchanged)
+src/ZoraFactoryImpl.sol[2K[1G[90msrc/ZoraFactoryImpl.sol[39m 504ms (unchanged)
+test/AutoSwapper.t.sol[2K[1G[90mtest/AutoSwapper.t.sol[39m 246ms (unchanged)
+test/Coin.t.sol[2K[1G[90mtest/Coin.t.sol[39m 682ms (unchanged)
+test/CoinUniV4.t.sol[2K[1G[90mtest/CoinUniV4.t.sol[39m 1411ms (unchanged)
+test/ContentCoinRewards.t.sol[2K[1G[90mtest/ContentCoinRewards.t.sol[39m 506ms (unchanged)
+test/CreatorCoin.t.sol[2K[1G[90mtest/CreatorCoin.t.sol[39m 611ms (unchanged)
+test/CreatorCoinRewards.t.sol[2K[1G[90mtest/CreatorCoinRewards.t.sol[39m 433ms (unchanged)
+test/DeploymentHooks.t.sol[2K[1G[90mtest/DeploymentHooks.t.sol[39m 298ms (unchanged)
+test/Factory.t.sol[2K[1G[90mtest/Factory.t.sol[39m 402ms (unchanged)
+test/HooksDeployment.t.sol[2K[1G[90mtest/HooksDeployment.t.sol[39m 49ms (unchanged)
+test/LiquidityMigration.t.sol[2K[1G[90mtest/LiquidityMigration.t.sol[39m 542ms (unchanged)
+test/mocks/MockERC20.sol[2K[1G[90mtest/mocks/MockERC20.sol[39m 4ms (unchanged)
+test/MultiOwnable.t.sol[2K[1G[90mtest/MultiOwnable.t.sol[39m 249ms (unchanged)
+test/Upgrades.t.sol[2K[1G[90mtest/Upgrades.t.sol[39m 345ms (unchanged)
+test/utils/BaseTest.sol[2K[1G[90mtest/utils/BaseTest.sol[39m 573ms (unchanged)
+test/utils/ContractAddresses.sol[2K[1G[90mtest/utils/ContractAddresses.sol[39m 53ms (unchanged)
+test/utils/DeployedCoinVersionLookup.t.sol[2K[1G[90mtest/utils/DeployedCoinVersionLookup.t.sol[39m 119ms (unchanged)
+test/utils/FeeEstimatorHook.sol[2K[1G[90mtest/utils/FeeEstimatorHook.sol[39m 99ms (unchanged)
+test/utils/ProtocolRewards.sol[2K[1G[90mtest/utils/ProtocolRewards.sol[39m 972ms (unchanged)
+test/utils/ProxyShim.sol[2K[1G[90mtest/utils/ProxyShim.sol[39m 9ms (unchanged)
+test/utils/RewardTestHelpers.sol[2K[1G[90mtest/utils/RewardTestHelpers.sol[39m 210ms (unchanged)
+test/ZoraHookRegistry.t.sol[2K[1G[90mtest/ZoraHookRegistry.t.sol[39m 556ms (unchanged)
+script/Deploy.s.sol[2K[1G[90mscript/Deploy.s.sol[39m 6ms (unchanged)
+script/DeployAutoSwapper.s.sol[2K[1G[90mscript/DeployAutoSwapper.s.sol[39m 13ms (unchanged)
+script/DeployDevFactory.s.sol[2K[1G[90mscript/DeployDevFactory.s.sol[39m 9ms (unchanged)
+script/DeployPostDeploymentHooks.s.sol[2K[1G[90mscript/DeployPostDeploymentHooks.s.sol[39m 11ms (unchanged)
+script/DeployUpgradeGate.s.sol[2K[1G[90mscript/DeployUpgradeGate.s.sol[39m 6ms (unchanged)
+script/GenerateDeterministicParams.s.sol[2K[1G[90mscript/GenerateDeterministicParams.s.sol[39m 74ms (unchanged)
+script/PrintRegisterUpgradePath.s.sol[2K[1G[90mscript/PrintRegisterUpgradePath.s.sol[39m 13ms (unchanged)
+script/PrintUpgradeCommand.s.sol[2K[1G[90mscript/PrintUpgradeCommand.s.sol[39m 3ms (unchanged)
+script/TestBackingCoinSwap.s.sol[2K[1G[90mscript/TestBackingCoinSwap.s.sol[39m 172ms (unchanged)
+script/TestV4Swap.s.sol[2K[1G[90mscript/TestV4Swap.s.sol[39m 157ms (unchanged)
+script/UpgradeCoinImpl.sol[2K[1G[90mscript/UpgradeCoinImpl.sol[39m 12ms (unchanged)
+script/UpgradeFactoryImpl.s.sol[2K[1G[90mscript/UpgradeFactoryImpl.s.sol[39m 15ms (unchanged)
+script/UpgradeHooks.s.sol[2K[1G[90mscript/UpgradeHooks.s.sol[39m 7ms (unchanged)
+[34mCLI[39m Building entry: package/index.ts
+[34mCLI[39m Using tsconfig: tsconfig.json
+[34mCLI[39m tsup v8.4.0
+[34mCLI[39m Using tsup config: /home/runner/workspace/packages/coins/tsup.config.ts
+[34mCLI[39m Target: es2021
+[34mCLI[39m Cleaning output folder
+[34mCJS[39m Build start
+[34mESM[39m Build start
+[32mCJS[39m [1mdist/index.cjs     [22m[32m131.44 KB[39m
+[32mCJS[39m [1mdist/index.cjs.map [22m[32m232.71 KB[39m
+[32mCJS[39m ⚡️ Build success in 144ms
+[32mESM[39m [1mdist/index.js     [22m[32m130.01 KB[39m
+[32mESM[39m [1mdist/index.js.map [22m[32m232.56 KB[39m
+[32mESM[39m ⚡️ Build success in 203ms
